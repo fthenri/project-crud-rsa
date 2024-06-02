@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA CRUD</title>
+</head>
+<body>
+    <h1>Lista de Chaves RSA</h1>
+    <a href="/create">Criar Nova Chave</a>
+    <ul>
+        {% for key_pair in key_pairs %}
+            <li>
+                <a href="/read/{{ key_pair.id }}">Chave ID: {{ key_pair.id }}</a>
+                <a href="/update/{{ key_pair.id }}">Editar</a>
+                <a href="/delete/{{ key_pair.id }}">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

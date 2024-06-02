@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Chave RSA</title>
+</head>
+<body>
+    <h1>Editar Chave RSA</h1>
+    <form action="/update/{{ key_pair.id }}" method="post">
+        <label for="public_key">Chave Pública:</label>
+        <textarea name="public_key" id="public_key" required>{{ key_pair.public_key }}</textarea>
+        <label for="private_key">Chave Privada:</label>
+        <textarea name="private_key" id="private_key" required>{{ key_pair.private_key }}</textarea>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>
